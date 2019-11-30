@@ -2,7 +2,6 @@ const dbname = 'store'
 module.exports = (app,couch)=>{
     app.route('/')
     .get((req,res,next)=>{
-        console.log('on this routing file'); 
         res.render('index')
     })
     app.get('/1',async (req,res,next)=>{
