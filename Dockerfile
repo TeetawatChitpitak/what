@@ -7,6 +7,7 @@ WORKDIR /usr/app
 #Entry Point
 
 COPY ./package.json ./
+COPY ./package-lock.json ./
 #copy file [เริ่มต้น] => [สิ้นสุด] เอาไฟล์ทั้งหมดไป
 RUN npm install
 COPY ./ ./ 
