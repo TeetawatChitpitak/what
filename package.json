@@ -15,7 +15,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "build-css":"node-sass -o asset/css/ asset/scss/layout.scss"
+    "build-css":"node-sass -o asset/css/ asset/scss/layout.scss",
+    "watch-css":"nodemon -e sass -x\"npm run build-css\""
   },
   "repository": {
     "type": "git",
