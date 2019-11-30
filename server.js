@@ -6,7 +6,7 @@ const couch = new NodeCouchDb()
 const route = require('./route')(app,couch)
 
 app.set('view engine','ejs')
-app.use('css',express.static('./asset/css/'))
+app.use('/css',express.static('./asset/css/'))
 
 
 
