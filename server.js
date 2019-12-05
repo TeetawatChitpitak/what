@@ -10,6 +10,15 @@ app.use('/css',express.static('./asset/css/'))
 app.use('/scripts',express.static('./asset/scripts'))
 app.use('/img',express.static('./asset/img'))
 
+
+// not admin party
+const couchAuth = new NodeCouchDb({
+    auth: {
+        user: 'root',
+        pass: 'kakz8654'
+    }
+});
+
 app.listen(port,()=>{
     console.log(`working on port ${port}`);
 })
