@@ -6,6 +6,7 @@ module.exports = (app,couch)=>{
     })
     app.get('/1',async (req,res,next)=>{
         try {
+            console.log('......');
             let viewurl = "_design/Items/_view/Items"
             let data = await couch.get(dbname,viewurl)
             let rows  = await data.data.rows
