@@ -1,5 +1,5 @@
 const dbname = 'store'
-module.exports = (app,couch)=>{
+module.exports = (app,couch,couchAuth)=>{
     app.route('/')
     .get((req,res,next)=>{
         res.render('index')
