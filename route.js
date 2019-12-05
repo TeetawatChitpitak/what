@@ -4,13 +4,11 @@ module.exports = (app,couch)=>{
     .get((req,res,next)=>{
         res.render('index')
     })
-    app.get('/1', (req,res,next)=>{
+    app.get('/1',async (req,res,next)=>{
         try {
             let viewurl = "_design/Items/_view/Items"
-            let data =  couch.get(dbname,viewurl)
-            let rows  =  data.data.rows
-            console.log(rows);
-            
+            let data = await couch.get(dbname,viewurl)
+            let rows  = await data.data.rows
             res.send(rows)
         } catch (error) {
          throw error   
